@@ -1,3 +1,11 @@
+---
+title: 01 Introduction
+draft: false
+tags:
+  - 数据库系统原理
+date: 2024-12-24
+---
+ 
 # History
 File System
 Cons:
@@ -27,7 +35,7 @@ NoSQL => No only SQL
 # 三级模式结构(Three-level Architecture)
 ![01 Introduction 数据库内部三级模式](https://note-image-1316665129.cos.ap-guangzhou.myqcloud.com/01%20Introduction%20%E4%B8%89%E7%BA%A7%E6%A8%A1%E5%BC%8F%E4%B8%A4%E7%BA%A7%E6%98%A0%E5%83%8F.png)
 Logical level: describes data stored in database, and the relationships among the data.
-```SQL
+```sql
 type customer = record
 		customer_id : string;
 		customer_name:string;
