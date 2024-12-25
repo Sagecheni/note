@@ -5,7 +5,6 @@ tags:
   - 数据库系统原理
 date: 2024-12-24
 ---
- 
 # History
 File System
 Cons:
@@ -33,7 +32,8 @@ NoSQL => No only SQL
 关系数据库还是主流的数据库
 
 # 三级模式结构(Three-level Architecture)
-![01 Introduction 数据库内部三级模式](https://note-image-1316665129.cos.ap-guangzhou.myqcloud.com/01%20Introduction%20%E4%B8%89%E7%BA%A7%E6%A8%A1%E5%BC%8F%E4%B8%A4%E7%BA%A7%E6%98%A0%E5%83%8F.png)
+
+![01 Introduction 数据库内部三级模式](https://note-image-1316665129.cos.ap-guangzhou.myqcloud.com/01%20Introduction%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%86%85%E9%83%A8%E4%B8%89%E7%BA%A7%E6%A8%A1%E5%BC%8F.png)
 Logical level: describes data stored in database, and the relationships among the data.
 ```sql
 type customer = record
@@ -45,7 +45,7 @@ type customer = record
 ```
 
 需要定义Mappings
-- THe Physical(internal)/Logical(conceptual) mapping
+- The Physical(internal)/Logical(conceptual) mapping
 - The View(external)/Logical(conceptual) mapping
 
 三级模式，两级映像
@@ -63,8 +63,7 @@ Logical Data Independence(逻辑数据独立性)
 the ability to modify the logical schema without changing the logical views
 (The View(external)/Logical(conceptual) mapping)
 当数据的逻辑结构改变时，用户程序也可以不变，并非能保证所有程序一定可以不改动，所以是不完备的
-
-![01 Introduction 三级模式两级映像](https://note-image-1316665129.cos.ap-guangzhou.myqcloud.com/01%20Introduction%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%86%85%E9%83%A8%E4%B8%89%E7%BA%A7%E6%A8%A1%E5%BC%8F.png)
+![01 Introduction 数据库内部三级模式](https://note-image-1316665129.cos.ap-guangzhou.myqcloud.com/01%20Introduction%20%E4%B8%89%E7%BA%A7%E6%A8%A1%E5%BC%8F%E4%B8%A4%E7%BA%A7%E6%98%A0%E5%83%8F.png)
 # Instances and Schemas
 Schema(模式) - the description of the structure of the data in a database 结构
 Instance(实例) - the actual content of the database at a partiacular point in time 包含数据，动态变化的，在每一个具体时刻的取值
@@ -94,7 +93,7 @@ Eg:
 ```sql
 Create table account(
 		account-number  char(10),
-		balance         integer)
+		balance                integer)
 )
 ```
 
@@ -104,4 +103,28 @@ Data Manipulation Language(DML)对数据的操作语言
 数据控制语言 (Data Control Language)
 对数据访问权进行控制的语句
 
+# Database Users
+- End Users:
+	- naive Users
+	- casual users
+- Application Programmeers --- Procedural SQL, Transaction
+- Database analyzer and designer ----- Data modeling, Normalization theory...
+- **Database Administrators,DBA** ----- Database maintenance, Security, Integrity, Recovery
+- **Database Management System designer and implementer** ----- Implementation technique of above techniques for Special and New Database Management System
+![01 Introduction System structure](https://note-image-1316665129.cos.ap-guangzhou.myqcloud.com/01%20Introduction%20System%20structure.png)
 
+data dictionary 数据字典 元数据，整个数据库的相关信息---三级模式信息，每一步运行都需要用到数据字典的信息(meta data)元数据
+
+Functions of DBMS
+- Data Definition and storage management;
+- Data Manipulation, Data Access;
+- Data Security and integrity;
+- Transaction management, Data recovery and concurrency;
+- Data dictionary;
+
+
+# Application Architectures
+C/S 结构
+胖客户端结构 -> B/S 结构(Browser/Server，浏览器/服务器模式) 也是C/S结构，三层结构
+B/S 既简单，也容易维护
+![](https://note-image-1316665129.cos.ap-guangzhou.myqcloud.com/01%20Introduction%20Application%20Architectures.png)
