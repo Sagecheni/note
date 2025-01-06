@@ -129,25 +129,26 @@ Present：映射关系是否存在
 Read/Write：是否可读/可写
 
 
-```ad-question
-为什么页表基地址是20位？
+> [!question]
+> 为什么页表基地址是20位？
+> 
+> 由页表的大小决定的，每个页表大小为4KB，所以offset要与4KB对齐，就是$2^{12}$个位置
+> 
+> 1. 4KB对齐要求：
+> 
+> - 每个页表必须在4KB边界上对齐
+> - 4KB = 4096 = 2^12 字节
+> - 这意味着页表的物理地址的低12位总是0
+> 
+> 2. 地址位的计算：
+> 
+> - 32位物理地址系统中，完整地址是32位
+> - 由于4KB对齐，低12位都是0
+> - 所以只需要存储高20位 (32 - 12 = 20)
+> - 这就是为什么页表基地址字段是20位(位12-31)
+> 
 
-由页表的大小决定的，每个页表大小为4KB，所以offset要与4KB对齐，就是$2^{12}$个位置
 
-1. 4KB对齐要求：
-
-- 每个页表必须在4KB边界上对齐
-- 4KB = 4096 = 2^12 字节
-- 这意味着页表的物理地址的低12位总是0
-
-2. 地址位的计算：
-
-- 32位物理地址系统中，完整地址是32位
-- 由于4KB对齐，低12位都是0
-- 所以只需要存储高20位 (32 - 12 = 20)
-- 这就是为什么页表基地址字段是20位(位12-31)
-
-```
 ![05 Address Translation PTE页表项](https://note-image-1316665129.cos.ap-guangzhou.myqcloud.com/BUPTCourse/OS/05%20Address%20Translation%20PTE%E9%A1%B5%E8%A1%A8%E9%A1%B9.png)
 
  ![05 Address Translation MMU](https://note-image-1316665129.cos.ap-guangzhou.myqcloud.com/BUPTCourse/OS/05%20Address%20Translation%20MMU.png)

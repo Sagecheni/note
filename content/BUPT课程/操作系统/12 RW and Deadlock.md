@@ -56,13 +56,13 @@ date: 2025-01-05
 ![RW and Deadlock 产生死锁的条件](https://note-image-1316665129.cos.ap-guangzhou.myqcloud.com/BUPTCourse/OS/RW%20and%20Deadlock%20%E4%BA%A7%E7%94%9F%E6%AD%BB%E9%94%81%E7%9A%84%E6%9D%A1%E4%BB%B6.png)
 两种或两种以上的资源才会死锁
 ![RW and Deadlock 死锁发生的条件2](https://note-image-1316665129.cos.ap-guangzhou.myqcloud.com/BUPTCourse/OS/RW%20and%20Deadlock%20%E6%AD%BB%E9%94%81%E5%8F%91%E7%94%9F%E7%9A%84%E6%9D%A1%E4%BB%B62.png)
-```ad-important
-<mark style="background: #FF5582A6;">死锁的四个条件</mark>
-- 互斥
-- 获取并等待
-- 没有抢占
-- 循环等待
-```
+
+> [!important]
+> <mark style="background: #FF5582A6;">死锁的四个条件</mark>
+> - 互斥
+> - 获取并等待
+> - 没有抢占
+> - 循环等待
 
 ## 如何处理死锁
 Allow system to enter deadlock and then recover(允许进入死锁状态并恢复)
