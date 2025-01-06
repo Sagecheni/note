@@ -1,5 +1,5 @@
 ---
-title: Github代理
+title: WSL配置AI环境
 date: 2024-10-23
 ---
 
