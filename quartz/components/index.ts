@@ -20,6 +20,8 @@ import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
+// Custom components
+import ConditionalComments from "./ConditionalComments"
 
 export {
   ArticleTitle,
@@ -44,4 +46,5 @@ export {
   NotFound,
   Breadcrumbs,
   Comments,
+  ConditionalComments,
 }
